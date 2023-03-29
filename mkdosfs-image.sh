@@ -27,7 +27,7 @@ fi
 
 # Create the cloud-init image using mkdosfs
 rm -f dist/cloud-init.img
-mkdosfs -n CIDATA -C dist/cloud-init.img 8192
+mkdosfs -n CIDATA -C dist/cloud-init.img 128
 
 # Copy the user-data, meta-data, and network-config files to the cloud-init image
 mcopy -oi dist/cloud-init.img -s data/user-data ::
